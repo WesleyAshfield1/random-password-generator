@@ -25,7 +25,29 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" onclick=" writePassword() ">Generate Password</button>
+        </div>
+        <div>
+          <select id="numberSelect"></select>
+          <script>
+            let select = document.querySelector('#numberSelect');
+              for (let i = 8; i <= 128; i++) {
+              let option = document.createElement('option');
+              option.value = i;
+              option.text = i;
+              select.add(option);
+           }
+          </script>
+        </div>
+        <div>
+          <input type="checkbox" id="callback1" value="Numbers"/>
+          <label for="cb1">Number</label>
+          <input type="checkbox" id="callback2" value="Uppercase"/>
+          <label for="cb1">Uppercase</label>
+          <input type="checkbox" id="callback3" value="Lowercase"/>
+          <label for="cb1">Lowercase</label>
+          <input type="checkbox" id="callback4" value="Symbols"/>
+          <label for="cb1">Symbol</label>
         </div>
       </div>
     </div>
